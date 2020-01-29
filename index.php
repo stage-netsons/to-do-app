@@ -40,6 +40,7 @@ if(isset($_POST['reset'])){
           <div class="callout">
             <h3>My First PHP App</h3>
             <p>Simple, Faste and <b>Secure</b> <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</p>
+            <p>MOdifica 2</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
@@ -77,6 +78,7 @@ if(isset($_POST['reset'])){
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 medium-push-2 cell">
                 <p><a href="#">Done:</a><br />
+                <p>Elenco azioni eseguite!!mod1</p>
                 <?php
                 if(isset($_SESSION['completed'])){
                     ?> <ul> <?php
