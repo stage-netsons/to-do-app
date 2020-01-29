@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST['todo_text'])){
     $_SESSION['todo'][] = $_POST['todo_text'];
-    header("Location /", true,301); 
+    header("Location /to-do-app/", true,301); 
     die();
 }
 if(isset($_POST['check'])){
@@ -10,15 +10,14 @@ if(isset($_POST['check'])){
         $to_check = $_SESSION['todo'][$_POST['check']];
         $_SESSION['completed'][] = $to_check;
         unset($_SESSION['todo'][$_POST['check']]);
-        die();
     }
-    header("Location /", true,301);
+    header("Location /to-do-app/", true,301);
     die();
 }
 if(isset($_POST['reset'])){
     session_destroy();
     $_SESSION = array();
-    header("Location /", true, 301);
+    header("Location /to-do-app/", true, 301);
     die();
 }
 ?>
