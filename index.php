@@ -76,12 +76,7 @@ if(isset($_POST['reset'])){
             <hr>
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 medium-push-2 cell">
-<<<<<<< HEAD
                 <p><a href="#">fatto:</a><br />
-=======
-                <p><a href="#">Done:</a><br />
-                <p>Elenco azioni eseguite!!mod1</p>
->>>>>>> 144c2ba3af01046d3ed703cfe26622e722b78637
                 <?php
                 if(isset($_SESSION['completed'])){
                     ?> <ul> <?php
@@ -105,11 +100,7 @@ if(isset($_POST['reset'])){
         </div>
       </div>
     </div>
-<<<<<<< HEAD
     <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by Jacopo il frocio</div> 
-=======
-    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by Stefano Palombo</div> 
->>>>>>> 144c2ba3af01046d3ed703cfe26622e722b78637
     <script src="/js/vendor/jquery.js"></script>
     <script src="/js/vendor/what-input.js"></script>
     <script src="/js/vendor/foundation.js"></script>
