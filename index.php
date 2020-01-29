@@ -39,7 +39,11 @@ if(isset($_POST['reset'])){
         <div class="large-12 cell">
           <div class="callout">
             <h3>My First PHP App</h3>
+<<<<<<< HEAD
             <p>Semplice e veloce <b>Secure</b> <code>PHP</code> To-Do App in solo 100 righe di codice 😆!</p>
+=======
+            <h1>Simple, Faste and <b>Secure</b> <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</h1>
+>>>>>>> c95667b7de21808a254623dce910b2b6262a9969
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
