@@ -39,7 +39,7 @@ if(isset($_POST['reset'])){
         <div class="large-12 cell">
           <div class="callout">
             <h3>My First PHP App</h3>
-            <p>Simple, Faste and <b>Secure</b> <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</p>
+            <p>Semplice e veloce <b>Secure</b> <code>PHP</code> To-Do App in solo 100 righe di codice 😆!</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
@@ -89,6 +89,7 @@ if(isset($_POST['reset'])){
                 }
                 ?>
                 <form action="" method="POST">
+
                     <input type="hidden" name="reset" value="1">
                     <input type="submit" value="Reset" class="alert button" style="width: 100%;">
                 </form>
@@ -99,7 +100,7 @@ if(isset($_POST['reset'])){
         </div>
       </div>
     </div>
-    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by Andrea Pavone</div> 
+    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by Stefano Palombo</div> 
     <script src="/js/vendor/jquery.js"></script>
     <script src="/js/vendor/what-input.js"></script>
     <script src="/js/vendor/foundation.js"></script>
