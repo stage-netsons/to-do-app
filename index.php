@@ -39,6 +39,7 @@ if(isset($_POST['reset'])){
         <div class="large-12 cell">
           <div class="callout">
             <h3>My First PHP App</h3>
+            
             <p>Simple, Faste and <b>Secure</b> <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
@@ -49,7 +50,7 @@ if(isset($_POST['reset'])){
             <hr>
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 cell">
-                <p><a href="#">TO-DO:</a>
+                <p><a href="#">da faraone:</a>
                 <ul>
                 <?php
                 if(isset($_SESSION['todo'])){
@@ -76,7 +77,7 @@ if(isset($_POST['reset'])){
             <hr>
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 medium-push-2 cell">
-                <p><a href="#">Done:</a><br />
+                <p><a href="#">fatto:</a><br />
                 <?php
                 if(isset($_SESSION['completed'])){
                     ?> <ul> <?php
@@ -99,7 +100,7 @@ if(isset($_POST['reset'])){
         </div>
       </div>
     </div>
-    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by Andrea Pavone</div> 
+    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by Jacopo il frocio</div> 
     <script src="/js/vendor/jquery.js"></script>
     <script src="/js/vendor/what-input.js"></script>
     <script src="/js/vendor/foundation.js"></script>
