@@ -28,8 +28,8 @@ if(isset($_POST['reset'])){
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App - My First PHP App!</title>
-    <link rel="stylesheet" href="/css/foundation.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <div class="grid-container">
@@ -104,9 +104,9 @@ if(isset($_POST['reset'])){
       </div>
     </div>
     <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/vendor/what-input.js"></script>
-    <script src="/js/vendor/foundation.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
