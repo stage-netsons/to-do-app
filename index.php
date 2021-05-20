@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST['todo_text'])){
   // TODO validare todo_text
-  // hello lorenzo
+  
     $_SESSION['todo'][] = $_POST['todo_text'];
     header("Location: /to-do-app/", true,301); 
     die();
