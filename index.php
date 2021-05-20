@@ -5,6 +5,7 @@ if(isset($_POST['todo_text'])){
     $_SESSION['todo'][] = $_POST['todo_text'];
     header("Location: /to-do-app/", true,301); 
     die();
+    
 }
 if(isset($_POST['check'])){
     if(isset($_SESSION['todo'][$_POST['check']])){
