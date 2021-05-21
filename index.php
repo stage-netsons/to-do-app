@@ -67,9 +67,7 @@ if(isset($_POST['reset'])){
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
-
-            <h3>My Second PHP App</h3>
-            <p>Simple and Fast <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</p>
+    
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <div style="display: flex;">
@@ -78,7 +76,6 @@ if(isset($_POST['reset'])){
                     </div>
                     
                     <input type="submit" value="Add" class="success button" style="width: 100%;">
-        
             <p>Non dimenticare niente! Ti aiuta To-Do App</p>
             <div class="large-12 cell">
                 <form action="" method="POST">

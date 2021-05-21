@@ -21,6 +21,7 @@ body{
     border-radius: 7px;
     border-color: darkcyan;
     font-weight: 700;
+    color: black;
     font-size: 16px;
 }
 .button.success:hover{
@@ -33,6 +34,7 @@ body{
 .button.alert {
     color: orangered;
     border-radius: 7px;
+    color: black;
     border-color: orange;
     font-weight: 700;
     font-size: 16px;
