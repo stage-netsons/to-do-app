@@ -43,17 +43,17 @@ if(isset($_POST['reset'])){
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
-            
+            <p>Non dimenticare niente! Ti aiuta To-Do-App</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
-                    <input type="submit" value="Add" class="success button" style="width: 100%;">
+                    <input type="submit" value="Add" class="success button" style="width: 50%; align:center;">
                 </form>
             </div>
-            <hr>
+        
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 cell">
-                <p><a href="#">To-Do:</a></p>
+                <p>Cose da fare:</p>
                 <?php
                 if(isset($_SESSION['todo'])){
                 ?>
@@ -70,7 +70,7 @@ if(isset($_POST['reset'])){
                 <?php
                 }else{
                 ?>
-                  <p>No Element on To-Do List.</p>
+                  <p>Non ci sono cose da fare</p>
                 <?php
                 }
                 ?>
@@ -79,7 +79,7 @@ if(isset($_POST['reset'])){
             <hr>
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 medium-push-2 cell">
-                <a href="#">Done:</a><br />
+              <P>Cose fatte:</p><br/>
                 <?php
                 if(isset($_SESSION['completed'])){
                 ?> 
@@ -104,7 +104,7 @@ if(isset($_POST['reset'])){
         </div>
       </div>
     </div>
-    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
+    <div style="position: fixed; bottom:10px; top:10px;">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
