@@ -53,7 +53,7 @@ if(isset($_POST['reset'])){
         
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 cell">
-                <p>Cose da fare:</p>
+                <p class="title">Cose da fare:</p>
                 <?php
                 if(isset($_SESSION['todo'])){
                 ?>
@@ -79,7 +79,7 @@ if(isset($_POST['reset'])){
             <hr>
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 medium-push-2 cell">
-              <P>Cose fatte:</p><br/>
+              <p class="title">Cose fatte:</p><br/>
                 <?php
                 if(isset($_SESSION['completed'])){
                 ?> 
@@ -104,7 +104,7 @@ if(isset($_POST['reset'])){
         </div>
       </div>
     </div>
-    <div style="position: fixed; bottom:10px; top:10px;">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
+    <div style="position: fixed; bottom:10px; margin-top:10px; margin-left:20px;">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
