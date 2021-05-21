@@ -13,7 +13,6 @@ if(isset($_POST['todo_text'], $_POST['todo_date'])) {
         $_SESSION['todo_date'][] = $_POST['todo_date'];
         $_SESSION['todo_complete'] = array_combine($_SESSION['todo'], $_SESSION['todo_date']);
         header("Location: /to-do-app/", true, 301);
-
         die();
     } else {
         $errore = "caratteri speciali ammessi: ! ' -";
@@ -77,14 +76,6 @@ if(isset($_POST['reset'])){
                     
                     <input type="submit" value="Add" class="success button" style="width: 100%;">
             <p>Non dimenticare niente! Ti aiuta To-Do App</p>
-            <div class="large-12 cell">
-                <form action="" method="POST">
-                    <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
-                    <input type="submit" value="Add" class="success button" style="width: 50%; align:center;">
-
-                </form>
-            </div>
-        
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 cell">
                 <p class="title">Cose da fare:</p>
@@ -93,7 +84,7 @@ if(isset($_POST['reset'])){
                 ?>
                     <form action="" method="POST">
                     <?php
-                    foreach ($_SESSION['todo_complete'] as $num => $todo) {
+                    foreach($_SESSION['todo_complete'] as $num => $todo) {
                     ?>
                         <input onclick="setTimeout(()=>{ return submit()}, 300);"  type="checkbox" name="check" value="<?=$num?>"> <?=$num?>  <?=$todo?>
                         <br>
