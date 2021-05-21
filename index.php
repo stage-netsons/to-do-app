@@ -3,23 +3,23 @@ session_start();
 
 $errore = "Add Elemento to TO-DO List";
 $errore_colore = "";
-if(isset($_POST['todo_text'], $_POST['todo_date'])){
-  // TODO validare todo_text5
-  
+if(isset($_POST['todo_text'], $_POST['todo_date'])) {
+    // TODO validare todo_text5
+
     $pattern = '/^[A-Za-z0-9!\s\'!-]+$/';
     $result_todo = preg_match($pattern, $_POST['todo_text']);
-    if($result_todo){
-      $_SESSION['todo'][] = $_POST['todo_text'];
-      $_SESSION['todo_date'][] = $_POST['todo_date'];
-      $_SESSION['todo_complete'] = array_combine($_SESSION['todo'], $_SESSION['todo_date']);
-      header("Location: /to-do-app/", true,301); 
-      
-      die();
+    if ($result_todo) {
+        $_SESSION['todo'][] = $_POST['todo_text'];
+        $_SESSION['todo_date'][] = $_POST['todo_date'];
+        $_SESSION['todo_complete'] = array_combine($_SESSION['todo'], $_SESSION['todo_date']);
+        header("Location: /to-do-app/", true, 301);
+
+        die();
+    } else {
+        $errore = "caratteri speciali ammessi: ! ' -";
+        $errore_colore = "errore";
     }
-    else{
-      $errore = "caratteri speciali ammessi: ! ' -";
-      $errore_colore = "errore";
-    }
+}
 
 if(isset($_POST['todo_text'])){
   //TODO validare todo_text
