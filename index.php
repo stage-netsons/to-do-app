@@ -78,13 +78,7 @@ if(isset($_POST['reset'])){
                     </div>
                     
                     <input type="submit" value="Add" class="success button" style="width: 100%;">
-                    
-                            
-                            
-                    <?php
-
-                    ?>
-
+        
             <p>Non dimenticare niente! Ti aiuta To-Do App</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
