@@ -3,7 +3,7 @@ session_start();
 $errore = "Add Elemento to TO-DO List";
 $errore_colore = "";
 if(isset($_POST['todo_text'], $_POST['todo_date'])){
-  // TODO validare todo_text
+  // TODO validare todo_text5
   
     $pattern = '/^[A-Za-z0-9!\s\'!-]+$/';
     $result_todo = preg_match($pattern, $_POST['todo_text']);
