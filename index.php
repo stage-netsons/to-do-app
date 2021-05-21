@@ -43,8 +43,7 @@ if(isset($_POST['reset'])){
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
-            <h3>My First PHP App</h3>
-            <p>Simple and Fast <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</p>
+            
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
