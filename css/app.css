@@ -3,10 +3,10 @@
 }
 
 .errore::placeholder{
-    color: blueviolet !important; 
+    color:orangered!important; 
 }
 body{
-    color:lightgray;
+    color:rgb(0, 0, 0);
 }
 .todo_text{
     margin:0 0 2rem;
@@ -16,36 +16,35 @@ body{
     border:3px solid;
     border-radius: 35px;
 }
-.button .success {
+.button.success {
     background-color: #25d7da;
     border-radius: 7px;
     border-color: darkcyan;
-    color: lightgray;
     font-weight: 700;
     font-size: 16px;
 }
-.button .success:hover{
+.button.success:hover{
     background-color: darkcyan;
 }
 .large-12cell{
     margin: 0 auto;
     align-items: center;
 }
-.button .alert {
+.button.alert {
     color: orangered;
     border-radius: 7px;
     border-color: orange;
-    color: lightgray;
     font-weight: 700;
     font-size: 16px;
 }
-.button .alert:hover {
+.button.alert:hover {
     color: orange;
 }
 h3{
     text-align: center;
+    font-size: 20px;
 }
 .title{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
 }
