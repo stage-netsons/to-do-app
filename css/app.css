@@ -5,3 +5,43 @@
 .errore::placeholder{
     color: blueviolet !important; 
 }
+body{
+    color:lightgray;
+}
+.todo_text{
+    margin:0 0 2rem;
+    border-radius: 7px;
+}
+.callout{
+    border:3px solid;
+    border-radius: 35px;
+}
+.button .success {
+    background-color: #25d7da;
+    border-radius: 7px;
+    border-color: darkcyan;
+    color: lightgray;
+    font-weight: 700;
+    font-size: 16px;
+}
+.button .success:hover{
+    background-color: darkcyan;
+}
+.large-12cell{
+    margin: 0 auto;
+    align-items: center;
+}
+.button .alert {
+    color: orangered;
+    border-radius: 7px;
+    border-color: orange;
+    color: lightgray;
+    font-weight: 700;
+    font-size: 16px;
+}
+.button .alert:hover {
+    color: orange;
+}
+h3{
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $errore = "Add Elemento to TO-DO List";
 $errore_colore = "";
 if(isset($_POST['todo_text'], $_POST['todo_date'])){
@@ -12,13 +13,21 @@ if(isset($_POST['todo_text'], $_POST['todo_date'])){
       $_SESSION['todo_date'][] = $_POST['todo_date'];
       $_SESSION['todo_complete'] = array_combine($_SESSION['todo'], $_SESSION['todo_date']);
       header("Location: /to-do-app/", true,301); 
-      echo "hello";
+      
       die();
     }
     else{
       $errore = "caratteri speciali ammessi: ! ' -";
       $errore_colore = "errore";
     }
+
+if(isset($_POST['todo_text'])){
+  //TODO validare todo_text
+    $_SESSION['todo'][] = $_POST['todo_text'];
+    header("Location: /to-do-app/", true,301); 
+    die();
+    
+
 }
 
 if(isset($_POST['check'])){
@@ -43,7 +52,7 @@ if(isset($_POST['reset'])){
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do App - My First PHP App!</title>
+    <title>To-Do App</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     
@@ -58,6 +67,7 @@ if(isset($_POST['reset'])){
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
+
             <h3>My Second PHP App</h3>
             <p>Simple and Fast <code>PHP</code> To-Do App in just 100 Lines of Code 😆!</p>
             <div class="large-12 cell">
@@ -74,12 +84,19 @@ if(isset($_POST['reset'])){
                     <?php
 
                     ?>
+=======
+            <p>Non dimenticare niente! Ti aiuta To-Do App</p>
+            <div class="large-12 cell">
+                <form action="" method="POST">
+                    <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
+                    <input type="submit" value="Add" class="success button" style="width: 50%; align:center;">
+
                 </form>
             </div>
-            <hr>
+        
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 cell">
-                <p><a href="#">To-Do:</a></p>
+                <p>Cose da fare:</p>
                 <?php
                 if(isset($_SESSION['todo_complete'])){
                 ?>
@@ -96,7 +113,7 @@ if(isset($_POST['reset'])){
                 <?php
                 }else{
                 ?>
-                  <p>No Element on To-Do List.</p>
+                  <p>Non ci sono cose da fare</p>
                 <?php
                 }
                 ?>
@@ -105,7 +122,7 @@ if(isset($_POST['reset'])){
             <hr>
             <div class="grid-x grid-padding-x">
               <div class="large-12 medium-12 medium-push-2 cell">
-                <a href="#">Done:</a><br />
+              <P>Cose fatte:</p><br/>
                 <?php
                 if(isset($_SESSION['completed'])){
                 ?> 
@@ -130,7 +147,7 @@ if(isset($_POST['reset'])){
         </div>
       </div>
     </div>
-    <div style="position: fixed; bottom:0">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
+    <div style="position: fixed; bottom:10px; top:10px;">© <?=date("Y")?> - Powered by <a href="https://andreapavone.com/">Andrea Pavone</a></div> 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
