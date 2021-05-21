@@ -84,7 +84,7 @@ if(isset($_POST['reset'])){
                     <?php
 
                     ?>
-=======
+
             <p>Non dimenticare niente! Ti aiuta To-Do App</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
