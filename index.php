@@ -29,7 +29,7 @@ if(isset($_POST['reset'])){
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do App - My First PHP App!</title>
+    <title>To-Do App</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
@@ -43,7 +43,7 @@ if(isset($_POST['reset'])){
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
-            <p>Non dimenticare niente! Ti aiuta To-Do-App</p>
+            <p>Non dimenticare niente! Ti aiuta To-Do App</p>
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <input type="text" name="todo_text" placeholder="Add Elemento to TO-DO List">
