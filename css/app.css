@@ -1,3 +1,10 @@
+.content-1{
+    display: flex;
+}
+
+.errore::placeholder{
+    color: blueviolet !important; 
+}
 body{
     color:lightgray;
 }
