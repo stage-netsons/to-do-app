@@ -35,3 +35,6 @@ body{
 .button .alert:hover {
     color: orange;
 }
+h3{
+    text-align: center;
+}
