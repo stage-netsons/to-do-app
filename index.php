@@ -20,6 +20,8 @@ if(isset($_POST['todo_text'], $_POST['todo_date'])) {
     }
 }
 
+
+/*
 if(isset($_POST['todo_text'])){
   //TODO validare todo_text
     $_SESSION['todo'][] = $_POST['todo_text'];
@@ -28,10 +30,12 @@ if(isset($_POST['todo_text'])){
     
 
 }
+*/
 
 if(isset($_POST['check'])){
     if(isset($_SESSION['todo_complete'][$_POST['check']])){
-        $to_check = $_SESSION['todo_complete'][$_POST['check']];
+        $controllo = $_POST['check'];
+        $to_check = $_SESSION['todo_complete'][[$_POST['check']]];
         $_SESSION['completed'][] = $to_check;
         unset($_SESSION['todo_complete'][$_POST['check']]);
     }
@@ -44,6 +48,10 @@ if(isset($_POST['reset'])){
     header("Location: /to-do-app/", true, 301);
     die();
 }
+
+
+
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
@@ -84,11 +92,19 @@ if(isset($_POST['reset'])){
                 ?>
                     <form action="" method="POST">
                     <?php
+                    $contatore = "0";
                     foreach($_SESSION['todo_complete'] as $num => $todo) {
+                      
+
                     ?>
-                        <input onclick="setTimeout(()=>{ return submit()}, 300);"  type="checkbox" name="check" value="<?=$num?>"> <?=$num?>  <?=$todo?>
+                        <input onclick="setTimeout(()=>{ return submit()}, 300);"  type="checkbox" name="check" value="<?=$contatore?>"> <?=$num?>  <?=$todo?>
                         <br>
                     <?php
+                    echo $contatore;
+                    echo $controllo;
+                      $contatore++; 
+
+                      
                     }
                     ?>
                     </form>

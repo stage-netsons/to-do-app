@@ -16,7 +16,7 @@ body{
     border:3px solid;
     border-radius: 35px;
 }
-.button.success {
+.button .success {
     background-color: #25d7da;
     border-radius: 7px;
     border-color: darkcyan;
@@ -24,7 +24,7 @@ body{
     color: black;
     font-size: 16px;
 }
-.button.success:hover{
+.button .success:hover{
     background-color: darkcyan;
 }
 .large-12cell{
