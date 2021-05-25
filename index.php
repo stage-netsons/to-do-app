@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$_SESSION['id_di_sessione'] = session_id();
+
 $errore = "Add Elemento to TO-DO List";
 $errore_colore = "";
 if(isset($_POST['todo_text'], $_POST['todo_date'])) {
@@ -8,10 +10,14 @@ if(isset($_POST['todo_text'], $_POST['todo_date'])) {
 
     $pattern = '/^[A-Za-z0-9!\s\'!-]+$/';
     $result_todo = preg_match($pattern, $_POST['todo_text']);
-    if ($result_todo) {
-        $_SESSION['todo'][] = $_POST['todo_text'];
-        $_SESSION['todo_date'][] = $_POST['todo_date'];
-        $_SESSION['todo_complete'] = array_combine($_SESSION['todo'], $_SESSION['todo_date']);
+    if($result_todo) {
+        $_SESSION['todo'] = $_POST['todo_text'];
+        $_SESSION['todo_date'] = $_POST['todo_date'];
+        $_SESSION['todo_complete'][] =[
+          "impegno" => $_SESSION['todo'],
+          "data" => $_SESSION['todo_date']
+        ];
+        
         header("Location: /to-do-app/", true, 301);
         die();
     } else {
@@ -34,8 +40,7 @@ if(isset($_POST['todo_text'])){
 
 if(isset($_POST['check'])){
     if(isset($_SESSION['todo_complete'][$_POST['check']])){
-        $controllo = $_POST['check'];
-        $to_check = $_SESSION['todo_complete'][[$_POST['check']]];
+        $to_check = $_SESSION['todo_complete'][$_POST['check']];
         $_SESSION['completed'][] = $to_check;
         unset($_SESSION['todo_complete'][$_POST['check']]);
     }
@@ -48,6 +53,8 @@ if(isset($_POST['reset'])){
     header("Location: /to-do-app/", true, 301);
     die();
 }
+
+
 
 
 
@@ -74,7 +81,15 @@ if(isset($_POST['reset'])){
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
-    
+    <pre>
+    <?php
+    //print_r($_SESSION['todo_complete']);
+
+
+    //print_r($_SESSION['completed']);
+
+    ?>
+    </pre>
             <div class="large-12 cell">
                 <form action="" method="POST">
                     <div style="display: flex;">
@@ -92,18 +107,14 @@ if(isset($_POST['reset'])){
                 ?>
                     <form action="" method="POST">
                     <?php
-                    $contatore = "0";
-                    foreach($_SESSION['todo_complete'] as $num => $todo) {
-                      
-
+                    
+                    foreach($_SESSION['todo_complete'] as $stampa => $x){
+                    
                     ?>
-                        <input onclick="setTimeout(()=>{ return submit()}, 300);"  type="checkbox" name="check" value="<?=$contatore?>"> <?=$num?>  <?=$todo?>
+                        <input onclick="setTimeout(()=>{ return submit()}, 300);"  type="checkbox" name="check" value="<?=$stampa?>"> <?=$x['impegno']?>  <?=$x["data"]?>
                         <br>
                     <?php
-                    echo $contatore;
-                    echo $controllo;
-                      $contatore++; 
-
+                      
                       
                     }
                     ?>
@@ -126,8 +137,8 @@ if(isset($_POST['reset'])){
                 ?> 
                   <ul> 
                     <?php
-                    foreach ($_SESSION['completed'] as $num => $todo) { ?>
-                      <li><?=$todo?></li>
+                    foreach ($_SESSION['completed'] as $x) { ?>
+                      <li><?=$x["impegno"]?> <?=$x["data"]?></li>
                     <?php
                     }
                     ?>
@@ -139,6 +150,11 @@ if(isset($_POST['reset'])){
                     <input type="hidden" name="reset" value="1">
                     <input type="submit" value="Reset" class="alert button" style="width: 100%;">
                 </form>
+
+                <p><a href="/riepilogo.php"></a></p>
+
+                
+                
               </div>
             </div>
           </div>
