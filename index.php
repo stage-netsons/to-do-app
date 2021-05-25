@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+
 session_start();
 
 $_SESSION['id_di_sessione'] = session_id();
