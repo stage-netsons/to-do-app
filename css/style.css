@@ -23,16 +23,77 @@ ul {
 li{
     list-style-type: none;
 }
-.flex-container {
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1.3em;
+}
+.container {
     width: 100%;
     height: auto;
- 
-    background-color:cornflowerblue;
+    background-color: orange; 
+    top: 0;
+    
 }
 .access{
     width: 80%;
     margin: 0 auto;
-    margin: 20em 20em;
-    color: orange;
-    opacity:0,7;
+    background-color:cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input{
+    width: 20em;
+    height: 2.7em;
+    border: 0.1em solid orange;
+    border-radius: 7em;
+    margin-top: 3.3em;
+}
+legend{
+ font-size: 1em;
+ color:black;
+ font-weight: 700;
+ margin-left: 1.3em;
+ margin-right: 1.3em;
+}
+.button{
+    background-color:white;
+    font-size: 1em;
+    font-weight: 700;
+   color: cornflowerblue;
+   margin-bottom: 3.3em;
+}
+.button:hover{
+    background-color:orange;
+   color: cornflowerblue;
+}
+hr{
+    width: 70%;
+   color:  orange;
+   size: 0.3em;
+}
+p{
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+
+}
+.registration{
+    width: 80%;
+    margin: 0 auto;
+    background-color:cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.registration legend{
+    margin-top: 1.3em;
+    width: 40%;
+}
+.privacy {
+   margin-bottom: 0.3em;
 }

@@ -7,13 +7,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
 <h1>{{ page_title }}</h1>
-<div class="flex-container">
-<h2>Accedi alla tua To-Do list</h2>
- <div class="access">
-   <input type="email" name="E-mail">
-   <input type="password" name="Password">
- </div>
+ <form type="post" class="access">
+   <legend>Inserisci E-mail<input type="email" name="E-mail"></legend>
+   <legend>Inserisci Password<input type="password" name="Psw"></legend></br>
+   <a href="#"><input class="button" type="submit" name="invia" value="Accedi"></a>
+   </form>
+   <hr/>
+   <p>Se non sei registrato, crea il tuo account To-Do</p>
+  <form class="registration">
+  <legend>Nome<input type="text" name="Nome"></legend>
+  <legend>Cognome<input type="text" name="Cognome"></legend>
+  <legend>E-mail<input type="email" name="E-mail"></legend>
+  <legend class="privacy">Privacy Policy<input type="radio" name="Privacy Policy" Value="Privacy Policy"></legend>
+   <a href="#"><input class="button" type="submit" name="invia" value="Registrati"></a>
+  </form>
 </div>
 </body>
 </html>

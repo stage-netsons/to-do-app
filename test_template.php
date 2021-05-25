@@ -24,7 +24,7 @@ $users = [
 
 //variabili template
 $vars = [
-    'page_title'    => 'Demo Twig - Stage Netsons',
+    'page_title'    => 'Accedi alla tua To-do list',
     'users'         => $users,
     'username'      => 'chiara',
     'logged_in'     => true, //false
